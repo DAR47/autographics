@@ -1,0 +1,619 @@
+@font-face {
+    font-family: fontLogo1;
+    src: url(/fonts/Bungee-Regular.ttf);
+}
+@font-face {
+    font-family: fontLogo2;
+    src: url(/fonts/DancingScript-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: fontLinks;
+    src: url(/fonts/Podkova-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: fontTitile;
+    src: url(/fonts/RubikGlitch-Regular.ttf);
+}
+@font-face {
+    font-family: fontText;
+    src: url(/fonts/RussoOne-Regular.ttf);
+}
+@font-face {
+    font-family: fontRobot;
+    src: url(/fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+    color: #fff;
+    position: relative;
+}
+html{
+    padding: 0;
+    margin: 0;
+
+}
+div{
+    padding: 0;
+    margin: 0;
+
+}
+.container{
+    width: 80vmax;
+    margin: 0 auto;
+    
+}
+.header{
+    z-index: 6;
+    position: relative;
+}
+.headerInner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1vmax
+}
+.headerLogo{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ user-select: none;
+}
+.headerLinks{
+ width: 40vmax;
+ display: flex;
+ justify-content: space-between;
+ font-family: fontLinks;
+ font-size: 1vmax; 
+ text-transform: uppercase; 
+ font-weight: 700;
+}
+.headerLink{
+ text-decoration: none;
+ color: #fff;
+ transition: all 0.2s;
+ position: relative;
+ display: flex;
+ justify-content: center;
+}
+.headerLink::before{
+     content: "";
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 100%;
+    width: 0%;
+    border-color: #fff;
+    position: absolute;
+    bottom: -10%;
+    transition: all 0.2s;
+}
+.headerLink:hover::before{
+    content: "";
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 100%;
+    width: 80%;
+    border-color: #fff;
+    position: absolute;
+    bottom: -10%;
+    
+}
+.headerLink:hover{
+    color: #dd2323;
+}
+.headerSearch{
+
+}
+.headerLogoTitle{
+    position: relative;
+    font-family: fontLogo1;
+    font-size: 1.5vmax;
+    display: flex;
+    justify-content: center;
+}
+.headerLogoTitle::before{
+
+    content: "";
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 100%;
+    width: 80%;
+    border-color: #fff;
+    position: absolute;
+    bottom: 0;
+
+}
+.headerLogoSubTitle{
+    color: #dd2323;
+    
+
+    padding-top: 0.1vmax;
+    font-family: fontLogo2;
+    font-size: 1.5vmax;
+}
+#headerSearchBtn{
+   
+    background-color: none;
+    border-style: none;
+    fill:#fff;
+    width:2vmax;
+    height: 2vmax;
+    padding: 0;
+    margin:0;
+    
+}
+.headerButton{
+    border-style: solid;
+
+    border-width: 1px;
+    
+    border-color: #fff;
+   
+    border-radius: 100%  ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    
+    transition: all 0.2s;
+    width: 3vmax;
+    height: 3vmax;
+
+}
+.headerButton:hover{
+    transform: scale(0.9);
+    background-color: #dd2323;
+
+}
+.headerSearch{
+    display: flex;
+    position: relative;
+}
+.headerInput{
+    display: none;
+}
+.headerButton:hover .headerInput{
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    border-style: none;
+    border-width: 1px;
+    border-radius: 2vmax 0 0 2vmax;
+    border-color: #fff;
+    position: absolute;
+    height: 5vmax;
+    width: 5vmax;
+}
+.intro{
+    
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 50vmax;
+    top: 0;
+    z-index: 4;
+}
+.introBlack{
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.24));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10%;
+    z-index: 5;
+}
+.introInner{
+    background-image: url(/images/intro.jpeg); 
+    background-size: cover;    
+    background-repeat: no-repeat; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -10%;
+    
+    left: 0;
+}
+.introTitle{
+    font-family: fontTitile;
+    font-size: 5vmax;
+    z-index: 7;
+    position: relative;
+    text-shadow: 0 0 3.5vmax #6e0505, 0 2vmax 1vmax #6e050548;
+}
+
+.introSubTitle{
+    color: #ffffff;
+    font-family: fontText;
+    font-size: 1.8vmax;
+    text-transform: uppercase;
+    font-weight: 200;
+    z-index: 6;
+    position: relative;
+    text-shadow: 0 0 2vmax #000000f3;
+}
+.introBtn{
+    color: #000000;
+    height: fit-content;
+    width: fit-content;
+    font-size: 1vmax;
+    text-transform: uppercase;
+    font-family: fontText;
+    z-index: 6;
+    padding: 0.5vmax 1.2vmax;
+    border-style: none;
+    border-radius: 5vmax;
+    background-color: #ffffff;
+    margin-top: 2vmax ;
+    transition: all 0.2s;
+}
+.introBtn:hover{
+    background-color: #dd2323;
+    transform: scale(1.05);
+    color: #fff;
+}
+.services{
+    background-color: #1b1b1b;
+    border-color: #dd2323;
+    border-style: dashed none none none;
+}
+.servicesInner{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-top: 3vmax;
+}
+.servicesTitle{
+   font-family: fontText;
+   font-size: 3vmax;
+   text-transform: uppercase;
+   margin-bottom: 4vmax;
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+.servicesSubTitle{
+   font-family: fontLinks;
+   font-size: 1vmax;
+   text-align: center;
+   text-transform: uppercase;
+   margin-bottom: 5vmax;
+   font-weight: 900;
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+.servicesTitle::before{
+    content: "";
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 100%;
+    width: 80%;
+    border-color: #dd2323;
+    position: absolute;
+    bottom: -10%;
+
+}
+.servicesBlocks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5vmax;
+}
+.servicesBlock{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    width: 19vmax;
+    background-color: #fff;
+    border-radius: 0.5vmax;
+    color: #000000;
+    align-items: center;
+    justify-content: center;
+    height: 12vmax;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    margin-bottom: 1.5vmax;
+}
+.servicesBlockAnim{
+    position: absolute;
+    background-color: #dd2323b7;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5vmax;
+    top: -100%;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.servicesBlock:hover .servicesBlockAnim{
+    top: 0;
+}
+.servicesBlockPrice{
+    font-family: fontLinks;
+    color: #ffffff;
+    font-weight: 1000;
+    font-size: 1.5vmax;
+    padding: 1vmax;
+    text-shadow: 0 0 2vmax #000000, 0 0 1vmax #000000;
+
+}
+.servicesBlockBtn{
+    font-family: fontLinks;
+    color: #000000;
+    font-weight: 900;
+    font-size: 1vmax;
+    background-color: #fff;
+    padding: 1vmax 2vmax;
+    border-style: none;
+    border-radius: 0.8vmax;
+    transition: all 0.2s;
+}
+.servicesBlockBtn:hover{
+    background-color: #000000;
+    color: #ffffff;
+    transform: scale(0.95);
+}
+.bottom{
+    background-color: #3b3b3b;
+}
+.bottomInner{
+    padding-top: 4vmax;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-bottom: 1vmax;
+}
+.bottomLinks{
+    display: flex;
+    flex-direction: column;
+    width: 11vmax;
+}
+.bottomContacts{
+
+}
+#vk{
+    fill: #ffffff;
+    width: 2vmax;
+    transition: all 0.2s;
+}
+#tg{
+    fill: #fff;
+    width: 2vmax;
+    transition: all 0.2s;
+}
+#max{
+    fill: #fff;
+    width: 1.75vmax;
+    transition: all 0.2s;
+}
+#vk:hover{
+    fill: #dd2323;
+    width: 2vmax;
+}
+#tg:hover{
+    fill: #dd2323;
+    width: 2vmax;
+}
+#max:hover{
+    fill: #dd2323;
+    width: 1.75vmax;
+}
+.bottomLinksBlock{
+    display: flex;
+}
+.bottomNumber{
+    font-family: fontLinks;
+    font-size: 1vmax;
+    margin-top: 1vmax;
+}
+.bottomContacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#logoHeaderAbsolute{
+    position: absolute;
+    top: 1vmax;
+    width: 4.5vmax;
+    left: 3vmax
+}
+#logoHeaderBottom{
+    position: absolute;
+    bottom: 1vmax;
+    width: 4.5vmax;
+    
+}
+.works{
+    background-color: #111111;
+    border-color: #dd2323;
+    border-style: dashed none none none;
+}
+.worksInner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vmax;
+}
+
+.worksSliderInner{
+    display: flex;
+    position: relative;
+    width: 35vmax;
+    height: 18vmax;
+    transition: all 0.2s;
+    overflow: hidden;
+    border-radius: 1vmax;
+}
+.worksSlider{
+    display: flex;
+    justify-content: space-between;
+    width: 50vmax;
+    align-items: center;
+}
+.worksSliderMove{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 18vmax;
+    transition: all 0.2s;
+}
+.worksSlide{
+    width: 35vmax;
+    height: 18vmax;
+    background-size: cover;
+    background-position: center;
+}
+.sliderBtn{
+    z-index: 2;
+    font-family: fontLogo1;
+    height: 2vmax;
+    width: 2vmax;
+    border-style: none;
+    border-radius: 50%;
+    font-size: 1vmax;
+    font-weight: 900;
+    transition: all 0.2s;
+}
+.sliderBtn:hover{
+    background-color: #dd2323;
+    transform: scale(0.95);
+}
+.worksSliderDots{
+    padding-top: 1.5vmax;
+    display: flex;
+    width: 10vmax;
+    justify-content: space-between;
+}
+.worksSliderDot{
+    width: 0.5vmax;
+    height: 0.5vmax;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.2s;
+    transform-origin: center;
+    cursor: pointer;
+}
+.worksInner{
+    padding-top: 3vmax;
+}
+.worksSliderDot:hover{
+    background-color: #dd2323;
+    transform: scale(1.2);
+}.worksTitle{
+    font-family: fontText;
+    font-size: 3vmax;
+    margin-bottom: 3vmax;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.worksTitle::before{
+    content: "";
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 100%;
+    width: 80%;
+    border-color: #dd2323;
+    position: absolute;
+    bottom: -10%;
+
+}
+.rates{
+    background-color: #000000;
+    border-color: #dd2323;
+    border-style: dashed none none none;
+}
+
+.ratesInner{
+    padding-top: 3vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4vmax;
+}
+.ratesTitle{
+    font-family: fontText;
+    font-size: 3vmax;
+    margin-bottom: 3vmax;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.ratesTitle::before{
+    content: "";
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 100%;
+    width: 80%;
+    border-color: #dd2323;
+    position: absolute;
+    bottom: -10%;
+
+}
+.ratesBlocks{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.ratesBlock{
+    width: 20vmax;
+    background-color: #363636;
+    padding: 1vmax 2vmax;
+    border-radius: 2vmax 2vmax 1vmax 1vmax ;
+    transition: all 0.2s;
+}
+.ratesBlock:hover{
+    background-color: #252525;
+    transform: scale(0.95);
+}
+.ratesBlockTitle{
+    display: flex ;
+    justify-content: left;
+    align-items: center;
+    width: 13vmax;
+    margin-bottom: 1vmax;
+    font-family: fontText;
+    font-size: 0.7vmax;
+    letter-spacing: 0.05vmax;
+
+}
+.ratesBlockNick{
+    margin-left: 1vmax;
+}
+.ratesBlockImg{
+    width: 3vmax;
+    height: 3vmax;
+    border-radius: 50vmax;
+    background-size: cover;
+    background-position: center;
+}
+.ratesBlockText{
+    font-family: fontRobot;
+    font-size: 0.7vmax;
+    letter-spacing: 0.02vmax;
+    font-weight: 300;
+}
