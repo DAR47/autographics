@@ -211,7 +211,7 @@ div{
     z-index: 5;
 }
 .introInner{
-    background-image: url(/images/intro.jpeg); 
+    background-image: url(images/intro.jpeg); 
     background-size: cover;    
     background-repeat: no-repeat; 
     background-position: center;
