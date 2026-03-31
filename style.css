@@ -1,26 +1,26 @@
 @font-face {
     font-family: fontLogo1;
-    src: url(/fonts/fonts/Bungee-Regular.ttf);
+    src: url(fonts/Bungee-Regular.ttf);
 }
 @font-face {
     font-family: fontLogo2;
-    src: url(/fonts/fonts/DancingScript-VariableFont_wght.ttf);
+    src: url(fonts/DancingScript-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: fontLinks;
-    src: url(/fonts/fonts/Podkova-VariableFont_wght.ttf);
+    src: url(fonts/Podkova-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: fontTitile;
-    src: url(/fonts/fonts/RubikGlitch-Regular.ttf);
+    src: url(fonts/RubikGlitch-Regular.ttf);
 }
 @font-face {
     font-family: fontText;
-    src: url(/fonts/fonts/RussoOne-Regular.ttf);
+    src: url(fonts/RussoOne-Regular.ttf);
 }
 @font-face {
     font-family: fontRobot;
-    src: url(/fonts/fonts/Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 a{
     text-decoration: none;
