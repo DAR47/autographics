@@ -83,3 +83,58 @@ document.querySelector('body').addEventListener("click", function(event){
      }
      
 })
+const modal = document.getElementById("bookingModal");
+const introBtn = document.querySelector(".introBtn");
+const modalClose = document.getElementById("modalClose");
+
+introBtn.addEventListener("click", () => {
+    modal.classList.add("active");
+});
+
+modalClose.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+modal.addEventListener("click", (e) => {
+    if(e.target === modal){
+        modal.classList.remove("active");
+    }
+});
+const newsButtons = document.querySelectorAll(".newsBtn");
+const newsModals = document.querySelectorAll(".newsModal");
+const newsCloseBtns = document.querySelectorAll(".newsModalClose");
+
+newsButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const modalId = button.dataset.modal;
+
+        document.getElementById(modalId)
+            .classList.add("active");
+    });
+
+});
+
+newsCloseBtns.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        button.closest(".newsModal")
+            .classList.remove("active");
+    });
+
+});
+
+newsModals.forEach(modal => {
+
+    modal.addEventListener("click", (e) => {
+
+        if(e.target === modal){
+
+            modal.classList.remove("active");
+        }
+
+    });
+
+});
