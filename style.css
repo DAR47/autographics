@@ -617,3 +617,577 @@ div{
     letter-spacing: 0.02vmax;
     font-weight: 300;
 }
+/* MODAL */
+
+.modal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.75);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s;
+
+    z-index: 100;
+    backdrop-filter: blur(0.3vmax);
+}
+
+.modal.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modalContent{
+    width: 30vmax;
+    background-color: #111111;
+
+    border: 0.15vmax solid #dd2323;
+    border-radius: 1vmax;
+
+    padding: 2vmax;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    box-shadow: 0 0 2vmax rgba(221,35,35,0.4);
+
+    animation: modalAnim 0.3s ease;
+}
+
+@keyframes modalAnim{
+    from{
+        transform: translateY(-2vmax) scale(0.95);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.modalTitle{
+    font-family: fontText;
+    font-size: 2vmax;
+
+    text-transform: uppercase;
+
+    margin-bottom: 2vmax;
+
+    text-align: center;
+}
+
+.modalForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.modalInput{
+    height: 3vmax;
+
+    margin-bottom: 1vmax;
+
+    border-radius: 0.5vmax;
+
+    border: 0.1vmax solid #444;
+
+    background-color: #1f1f1f;
+
+    color: #fff;
+
+    padding: 0 1vmax;
+
+    font-family: fontRobot;
+    font-size: 0.9vmax;
+
+    outline: none;
+
+    transition: border 0.2s;
+}
+
+.modalInput:focus{
+    border-color: #dd2323;
+}
+
+.modalTextarea{
+    min-height: 8vmax;
+
+    resize: none;
+
+    border-radius: 0.5vmax;
+
+    border: 0.1vmax solid #444;
+
+    background-color: #1f1f1f;
+
+    color: #fff;
+
+    padding: 1vmax;
+
+    font-family: fontRobot;
+    font-size: 0.9vmax;
+
+    outline: none;
+
+    margin-bottom: 1.5vmax;
+
+    transition: border 0.2s;
+}
+
+.modalTextarea:focus{
+    border-color: #dd2323;
+}
+
+.modalBtn{
+    height: 3.2vmax;
+
+    border: none;
+
+    border-radius: 5vmax;
+
+    background-color: #dd2323;
+
+    color: white;
+
+    font-family: fontText;
+    font-size: 1vmax;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.modalBtn:hover{
+    background-color: #ffffff;
+    color: #000000;
+
+    transform: scale(0.97);
+}
+
+.modalClose{
+    position: absolute;
+
+    top: 1vmax;
+    right: 1vmax;
+
+    width: 2vmax;
+    height: 2vmax;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #dd2323;
+
+    color: white;
+
+    font-size: 1.2vmax;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.modalClose:hover{
+    transform: rotate(90deg) scale(0.9);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px){
+
+    .modalContent{
+        width: 85%;
+        padding: 5vmax;
+    }
+
+    .modalTitle{
+        font-size: 4vmax;
+    }
+
+    .modalInput,
+    .modalBtn{
+        height: 6vmax;
+        font-size: 2vmax;
+    }
+
+    .modalTextarea{
+        font-size: 2vmax;
+    }
+
+    .modalClose{
+        width: 5vmax;
+        height: 5vmax;
+        font-size: 3vmax;
+    }
+}
+/* NEWS */
+
+.news{
+    background-color: #111111;
+
+    border-style: dashed none none none;
+    border-color: #dd2323;
+}
+
+.newsInner{
+    padding: 4vmax 0;
+}
+
+.newsTitle{
+    font-family: fontText;
+
+    font-size: 3vmax;
+
+    text-transform: uppercase;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 4vmax;
+}
+
+.newsTitle::before{
+    content: "";
+
+    position: absolute;
+
+    bottom: -10%;
+
+    width: 80%;
+
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 100%;
+
+    border-color: #dd2323;
+}
+
+.newsBlocks{
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+
+.newsBlock{
+    width: 24vmax;
+
+    background-color: #1f1f1f;
+
+    border-radius: 1vmax;
+
+    overflow: hidden;
+
+    transition: all 0.25s;
+
+    box-shadow: 0 0 1vmax rgba(0,0,0,0.4);
+}
+
+.newsBlock:hover{
+    transform: translateY(-0.5vmax);
+
+    box-shadow: 0 0 2vmax rgba(221,35,35,0.35);
+}
+
+.newsImg{
+    width: 100%;
+    height: 14vmax;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: transform 0.3s;
+}
+
+.newsBlock:hover .newsImg{
+    transform: scale(1.05);
+}
+
+.newsContent{
+    padding: 1.5vmax;
+}
+
+.newsDate{
+    font-family: fontRobot;
+
+    font-size: 0.75vmax;
+
+    color: #dd2323;
+
+    margin-bottom: 0.7vmax;
+
+    text-transform: uppercase;
+}
+
+.newsBlockTitle{
+    font-family: fontText;
+
+    font-size: 1.2vmax;
+
+    margin-bottom: 1vmax;
+
+    line-height: 1.4vmax;
+}
+
+.newsText{
+    font-family: fontRobot;
+
+    font-size: 0.8vmax;
+
+    color: #d0d0d0;
+
+    line-height: 1.3vmax;
+
+    margin-bottom: 1.5vmax;
+}
+
+.newsBtn{
+    height: 2.8vmax;
+
+    padding: 0 1.5vmax;
+
+    border: none;
+
+    border-radius: 5vmax;
+
+    background-color: #dd2323;
+
+    color: white;
+
+    font-family: fontText;
+
+    font-size: 0.8vmax;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.newsBtn:hover{
+    background-color: white;
+
+    color: black;
+
+    transform: scale(0.96);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px){
+
+    .newsBlocks{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsBlock{
+        width: 90%;
+        margin-bottom: 4vmax;
+    }
+
+    .newsImg{
+        height: 30vmax;
+    }
+
+    .newsTitle{
+        font-size: 5vmax;
+    }
+
+    .newsDate{
+        font-size: 2vmax;
+    }
+
+    .newsBlockTitle{
+        font-size: 3vmax;
+        line-height: 4vmax;
+    }
+
+    .newsText{
+        font-size: 2vmax;
+        line-height: 3vmax;
+    }
+
+    .newsBtn{
+        height: 6vmax;
+        font-size: 2vmax;
+    }
+}
+/* NEWS MODAL */
+
+.newsModal{
+    position: fixed;
+
+    inset: 0;
+
+    background-color: rgba(0,0,0,0.8);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.3s;
+
+    z-index: 200;
+
+    backdrop-filter: blur(0.3vmax);
+}
+
+.newsModal.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.newsModalContent{
+    width: 45vmax;
+
+    background-color: #111111;
+
+    border: 0.15vmax solid #dd2323;
+
+    border-radius: 1vmax;
+
+    overflow: hidden;
+
+    position: relative;
+
+    animation: newsModalAnim 0.3s ease;
+
+    box-shadow: 0 0 2vmax rgba(221,35,35,0.35);
+}
+
+@keyframes newsModalAnim{
+
+    from{
+        transform: scale(0.9) translateY(-2vmax);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.newsModalImage{
+    width: 100%;
+    height: 20vmax;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.newsModalDate{
+    color: #dd2323;
+
+    font-family: fontRobot;
+
+    font-size: 0.8vmax;
+
+    padding: 1.5vmax 2vmax 0.5vmax;
+}
+
+.newsModalTitle{
+    font-family: fontText;
+
+    font-size: 1.8vmax;
+
+    padding: 0 2vmax;
+
+    margin-bottom: 1.5vmax;
+}
+
+.newsModalText{
+    font-family: fontRobot;
+
+    font-size: 0.9vmax;
+
+    line-height: 1.5vmax;
+
+    color: #d0d0d0;
+
+    padding: 0 2vmax 2vmax;
+}
+
+.newsModalClose{
+    position: absolute;
+
+    top: 1vmax;
+    right: 1vmax;
+
+    width: 2.2vmax;
+    height: 2.2vmax;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #dd2323;
+
+    color: white;
+
+    font-size: 1.3vmax;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.newsModalClose:hover{
+    transform: rotate(90deg) scale(0.9);
+
+    background-color: white;
+
+    color: black;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px){
+
+    .newsModalContent{
+        width: 90%;
+    }
+
+    .newsModalImage{
+        height: 35vmax;
+    }
+
+    .newsModalDate{
+        font-size: 2vmax;
+    }
+
+    .newsModalTitle{
+        font-size: 3.5vmax;
+    }
+
+    .newsModalText{
+        font-size: 2vmax;
+        line-height: 3.5vmax;
+    }
+
+    .newsModalClose{
+        width: 5vmax;
+        height: 5vmax;
+
+        font-size: 3vmax;
+    }
+}
