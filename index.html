@@ -19,13 +19,12 @@
                     </div>
                 </div>
                 <div class="headerLinks">
-                    <a class="headerLink" href="#">о нас</a>
-                    <a class="headerLink" href="#">услуги</a>
-                    <a class="headerLink" href="#">цены</a>
-                    <a class="headerLink" href="#">работы</a>
-                    <a class="headerLink" href="#">отзывы</a>
-                    <a class="headerLink" href="#">контакты</a>
-                    <a class="headerLink" href="#">новости</a>
+                    <a class="headerLink" href="#services">услуги</a>
+                    <a class="headerLink" href="#works">работы</a>
+                    <a class="headerLink" href="#rev">отзывы</a>
+                    <a class="headerLink" href="#news">новости</a>
+                    <a class="headerLink" href="#contacts">контакты</a>
+                    
                 </div>
                 <div class="headerSearch">
                     <input class="headerInput" type="text">
@@ -59,7 +58,41 @@
             </div>
         </div>
     </div>
-    <div class="services">
+    <div class="modal" id="bookingModal">
+    <div class="modalContent">
+
+        <button class="modalClose" id="modalClose">
+            ×
+        </button>
+
+        <div class="modalTitle">
+            Запись на услугу
+        </div>
+
+        <form class="modalForm">
+
+            <input class="modalInput" type="text" placeholder="Ваше имя">
+
+            <input class="modalInput" type="tel" placeholder="Телефон">
+
+            <select class="modalInput">
+                <option>Выберите услугу</option>
+                <option>Полировка</option>
+                <option>Химчистка</option>
+                <option>Оклейка пленкой</option>
+                <option>Керамика</option>
+            </select>
+
+            <textarea class="modalTextarea" placeholder="Комментарий"></textarea>
+
+            <button class="modalBtn">
+                Отправить
+            </button>
+
+        </form>
+    </div>
+</div>
+    <div class="services" id="services">
         <div class="container">
             <div class="servicesInner">
                 <div class="servicesTitle">
@@ -251,7 +284,7 @@
             </div>
         </div>
     </div>
-    <div class="works">
+    <div class="works" id="works">
         <div class="container">
             <div class="worksInner">
                 <div class="worksTitle">
@@ -279,7 +312,7 @@
             </div>
         </div>
     </div>
-    <div class="rates">
+    <div class="rates" id="rev"> 
         <div class="container">
             <div class="ratesInner">
                 <div class="ratesTitle">Отзывы</div>
@@ -338,7 +371,212 @@
             </div>
         </div>
     </div>
-    <div class="bottom">
+    <div class="news" id="news">
+    <div class="container">
+
+        <div class="newsInner">
+
+            <div class="newsTitle">
+                Новости
+            </div>
+
+            <div class="newsBlocks">
+
+                <div class="newsBlock">
+
+                    <div class="newsImg"
+                        style="background-image: url(images/news.jpeg);">
+                    </div>
+
+                    <div class="newsContent">
+
+                        <div class="newsDate">
+                            25 мая 2026
+                        </div>
+
+                        <div class="newsBlockTitle">
+                            Новое керамическое покрытие премиум класса
+                        </div>
+
+                        <div class="newsText">
+                            В студии AutoGraphics теперь доступно новое поколение
+                            керамики с усиленным гидрофобным эффектом и защитой
+                            лакокрасочного покрытия до 5 лет.
+                        </div>
+
+                        <button class="newsBtn" data-modal="newsModal1" >
+                            Подробнее
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="newsBlock">
+
+                    <div class="newsImg"
+                        style="background-image: url(images/news2.jpg);">
+                    </div>
+
+                    <div class="newsContent">
+
+                        <div class="newsDate">
+                            18 мая 2026
+                        </div>
+
+                        <div class="newsBlockTitle">
+                            Расширение зоны детейлинга
+                        </div>
+
+                        <div class="newsText">
+                            Мы увеличили рабочую площадь студии и добавили
+                            новую зону оклейки автомобилей антигравийной плёнкой.
+                        </div>
+
+                        <button class="newsBtn" data-modal="newsModal2" >
+                            Подробнее
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="newsBlock">
+
+                    <div class="newsImg"
+                        style="background-image: url(images/news3.jpg);">
+                    </div>
+
+                    <div class="newsContent">
+
+                        <div class="newsDate">
+                            10 мая 2026
+                        </div>
+
+                        <div class="newsBlockTitle">
+                            Скидки на полировку кузова
+                        </div>
+
+                        <div class="newsText">
+                            До конца месяца действует специальное предложение
+                            на глубокую полировку и защитные покрытия.
+                        </div>
+
+                        <button class="newsBtn" data-modal="newsModal3" >
+                            Подробнее
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- NEWS MODALS -->
+
+<div class="newsModal" id="newsModal1">
+
+    <div class="newsModalContent">
+
+        <button class="newsModalClose">
+            ×
+        </button>
+
+        <div class="newsModalImage"
+            style="background-image: url(images/news.jpeg);">
+        </div>
+
+        <div class="newsModalDate">
+            25 мая 2026
+        </div>
+
+        <div class="newsModalTitle">
+            Новое керамическое покрытие премиум класса
+        </div>
+
+        <div class="newsModalText">
+            В студии AutoGraphics появилось новое поколение защитной
+            керамики с улучшенной формулой. Покрытие обеспечивает
+            глубокий блеск кузова, мощный гидрофобный эффект и защиту
+            лакокрасочного покрытия до 5 лет.
+
+            Новая технология значительно уменьшает появление мелких
+            царапин и облегчает уход за автомобилем.
+        </div>
+
+    </div>
+
+</div>
+
+<div class="newsModal" id="newsModal2">
+
+    <div class="newsModalContent">
+
+        <button class="newsModalClose">
+            ×
+        </button>
+
+        <div class="newsModalImage"
+            style="background-image: url(images/news2.jpg);">
+        </div>
+
+        <div class="newsModalDate">
+            18 мая 2026
+        </div>
+
+        <div class="newsModalTitle">
+            Расширение зоны детейлинга
+        </div>
+
+        <div class="newsModalText">
+            Мы расширили рабочую зону студии и открыли новый пост
+            для оклейки автомобилей антигравийной плёнкой.
+
+            Теперь обслуживание клиентов будет ещё быстрее,
+            а качество работ останется на максимально высоком уровне.
+        </div>
+
+    </div>
+
+</div>
+
+<div class="newsModal" id="newsModal3">
+
+    <div class="newsModalContent">
+
+        <button class="newsModalClose">
+            ×
+        </button>
+
+        <div class="newsModalImage"
+            style="background-image: url(images/news3.jpg);">
+        </div>
+
+        <div class="newsModalDate">
+            10 мая 2026
+        </div>
+
+        <div class="newsModalTitle">
+            Скидки на полировку кузова
+        </div>
+
+        <div class="newsModalText">
+            До конца месяца действует специальная акция
+            на глубокую полировку кузова и нанесение
+            защитных покрытий.
+
+            Успейте подготовить автомобиль к летнему сезону
+            по выгодной цене.
+        </div>
+
+    </div>
+
+</div>
+    <div class="bottom" id="contacts">
         <div class="container">
             <div class="bottomInner">
                 <div class="bottomLogo">
@@ -353,18 +591,14 @@
             </div>
             <div class="bottomLinksBlock">
                 <div class="headerLinks bottomLinks">
-                    <a class="headerLink" href="#">о нас</a>
-                    <a class="headerLink" href="#">услуги</a>
-                    <a class="headerLink" href="#">цены</a>
+                    <a class="headerLink" href="#services">услуги</a>
+                    <a class="headerLink" href="#works">работы</a>
+                    <a class="headerLink" href="#rev">отзывы</a>
+                    <a class="headerLink" href="#news">новости</a>
+                    <a class="headerLink" href="#contacts">контакты</a>
                    
                 </div>
-                 <div class="headerLinks bottomLinks">
-                    
-                    <a class="headerLink" href="#">работы</a>
-                    <a class="headerLink" href="#">отзывы</a>
-                    <a class="headerLink" href="#">контакты</a>
-                    <a class="headerLink" href="#">новости</a>
-                </div>
+                 
             </div>
                 
             <div class="bottomContacts">
